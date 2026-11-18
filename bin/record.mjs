@@ -8,7 +8,7 @@ import { access, mkdir, rename, rm } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
-const help = `demo-recorder <url> [options]
+const help = `framepress <url> [options]
   --demo                 Render a bundled art study
   --style ember        ember | indexed | phosphor
   --out clip.mp4         Output path (default: demo.mp4)
@@ -50,7 +50,7 @@ try {
   partial = `${out}.${process.pid}.partial.mp4`;
   const start = performance.now();
   const frames = Math.max(1, Math.round(seconds * fps));
-  console.log(`\n  ◈  DEMO RECORDER\n  ${width} × ${height} / ${fps} fps / ${frames} frames\n`);
+  console.log(`\n  ◈  FRAMEPRESS\n  ${width} × ${height} / ${fps} fps / ${frames} frames\n`);
   browser = await chromium.launch({ headless: true, ...(v.browser || process.env.CHROME_PATH ? { executablePath: v.browser || process.env.CHROME_PATH } : { channel: 'chrome' }), args: ['--mute-audio'] });
   const page = await browser.newPage({ viewport: { width, height }, deviceScaleFactor: 1 });
   const errors = [];

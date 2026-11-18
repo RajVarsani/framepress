@@ -1,4 +1,4 @@
-# Demo Recorder
+# Framepress
 
 Export a WebGL page to a silent H.264 MP4, advancing the animation one frame at a time. Comes with three original shader studies. Ember is the default.
 
@@ -6,27 +6,32 @@ Export a WebGL page to a silent H.264 MP4, advancing the animation one frame at 
 
 [Watch the six-second Ember render](media/ember.mp4)
 
-## Run from GitHub
+## Run
 
 Requires Node 22+ and installed Google Chrome. FFmpeg downloads automatically with the dependencies.
 
 ```sh
-npx --yes --package=https://github.com/RajVarsani/demo-recorder/releases/download/v0.1.0/rajvarsani-demo-recorder-0.1.0.tgz demo-recorder --demo --out ember.mp4
+npx framepress --demo --out ember.mp4
 ```
 
 Record your own local page:
 
 ```sh
-npx --yes --package=https://github.com/RajVarsani/demo-recorder/releases/download/v0.1.0/rajvarsani-demo-recorder-0.1.0.tgz demo-recorder http://localhost:3000 --seconds 8 --fps 60 --out demo.mp4
+npx framepress http://localhost:3000 --seconds 8 --fps 60 --out demo.mp4
 ```
 
-The npm registry release is pending. The GitHub release above is the current distribution.
+Install globally if you prefer:
+
+```sh
+npm install -g framepress
+framepress --demo
+```
 
 ## Develop locally
 
 ```sh
-git clone https://github.com/RajVarsani/demo-recorder.git
-cd demo-recorder
+git clone https://github.com/RajVarsani/framepress.git
+cd framepress
 npm ci
 npm run demo
 ```
@@ -73,4 +78,4 @@ MIT for this source. Dependencies and the downloaded FFmpeg binary retain their 
 
 ## Publishing from GitHub Actions
 
-The manual `publish.yml` workflow uses npm trusted publishing with OIDC. Once the package exists on npm, configure its trusted publisher as GitHub user `RajVarsani`, repository `demo-recorder`, workflow `publish.yml`. Then bump the version, push the commit and run the workflow. No npm token is stored in GitHub.
+The manual `publish.yml` workflow uses npm trusted publishing with OIDC. Once the package exists on npm, configure its trusted publisher as GitHub user `RajVarsani`, repository `framepress`, workflow `publish.yml`. Then bump the version, push the commit and run the workflow. No npm token is stored in GitHub.

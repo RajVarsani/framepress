@@ -1,10 +1,10 @@
 {
-  "name": "@rajvarsani/demo-recorder",
-  "version": "0.1.0",
+  "name": "framepress",
+  "version": "0.1.1",
   "description": "Frame-by-frame WebGL to MP4. One command, no frame folders.",
   "type": "module",
   "bin": {
-    "demo-recorder": "bin/record.mjs"
+    "framepress": "bin/record.mjs"
   },
   "files": [
     "bin",
@@ -26,11 +26,11 @@
   "author": "Raj Varsani",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RajVarsani/demo-recorder.git"
+    "url": "git+https://github.com/RajVarsani/framepress.git"
   },
-  "homepage": "https://github.com/RajVarsani/demo-recorder#readme",
+  "homepage": "https://github.com/RajVarsani/framepress#readme",
   "bugs": {
-    "url": "https://github.com/RajVarsani/demo-recorder/issues"
+    "url": "https://github.com/RajVarsani/framepress/issues"
   },
   "keywords": [
     "webgl",
