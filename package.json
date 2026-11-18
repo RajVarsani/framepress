@@ -1,0 +1,46 @@
+{
+  "name": "@rajvarsani/demo-recorder",
+  "version": "0.1.0",
+  "description": "Frame-by-frame WebGL to MP4. One command, no frame folders.",
+  "type": "module",
+  "bin": {
+    "demo-recorder": "bin/record.mjs"
+  },
+  "files": [
+    "bin",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "demo": "node bin/record.mjs --demo --style ember --out ember.mp4"
+  },
+  "dependencies": {
+    "playwright-core": "1.65.1",
+    "ffmpeg-static": "5.3.0"
+  },
+  "license": "MIT",
+  "author": "Raj Varsani",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RajVarsani/demo-recorder.git"
+  },
+  "homepage": "https://github.com/RajVarsani/demo-recorder#readme",
+  "bugs": {
+    "url": "https://github.com/RajVarsani/demo-recorder/issues"
+  },
+  "keywords": [
+    "webgl",
+    "mp4",
+    "threejs",
+    "recorder",
+    "shader"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

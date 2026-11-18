@@ -1,0 +1,6 @@
+node_modules/
+*.tgz
+*.partial.mp4
+/ember.mp4
+/demo.mp4
+.DS_Store
